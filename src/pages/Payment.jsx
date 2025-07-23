@@ -39,7 +39,14 @@ const Payment = () => {
         alert("Payment failed");
       }
     } catch (err) {
-      alert("Payment error");
+      let msg = "Payment error";
+      if (err.response && err.response.data) {
+        msg += ": " + (err.response.data.error || JSON.stringify(err.response.data));
+      } else if (err.message) {
+        msg += ": " + err.message;
+      }
+      alert(msg);
+      console.error("Payment error:", err);
     } finally {
       setLoading(false);
     }
