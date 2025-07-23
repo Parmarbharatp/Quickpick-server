@@ -25,7 +25,7 @@ const Payment = () => {
     try {
       // Stripe expects amount in cents
       const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/create-payment-intent`, {
-        amount: Math.round(totalAmount * 100),
+        amount: totalAmount,
       });
       const result = await stripe.confirmCardPayment(data.clientSecret, {
         payment_method: {
