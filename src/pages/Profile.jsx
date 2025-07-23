@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './CSS/Profile.css';
 
-const API_BASE = 'http://localhost:5000/api/auth';
+const API_BASE = 'https://quickpick-backend-6hkt.onrender.com/api/auth';
 
 export default function Profile() {
   const [profile, setProfile] = useState(null);

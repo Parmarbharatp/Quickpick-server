@@ -56,7 +56,7 @@ const ShopContextProvider = (props)=>{
     const fetchCartFromBackend = async (user) => {
         try {
             const userId = user._id || user.email;
-            const res = await fetch(`http://localhost:5000/api/cart/${userId}`);
+            const res = await fetch(`https://quickpick-backend-6hkt.onrender.com/api/cart/${userId}`);
             let backendCart = getDefaultCart();
             if (res.ok) {
                 const data = await res.json();
@@ -85,7 +85,7 @@ const ShopContextProvider = (props)=>{
     const saveCartToBackend = async (user, cart) => {
         try {
             const userId = user._id || user.email;
-            await fetch('http://localhost:5000/api/cart', {
+            await fetch('https://quickpick-backend-6hkt.onrender.com/api/cart', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userId, cartItems: cart })
@@ -98,7 +98,7 @@ const ShopContextProvider = (props)=>{
     const fetchOrdersFromBackend = async (user) => {
         try {
             const userId = user._id || user.email;
-            const res = await fetch(`http://localhost:5000/api/order/${userId}`);
+            const res = await fetch(`https://quickpick-backend-6hkt.onrender.com/api/order/${userId}`);
             if (res.ok) {
                 const data = await res.json();
                 console.log('Fetched orders from backend:', data); // Debug log
@@ -114,7 +114,7 @@ const ShopContextProvider = (props)=>{
     const saveOrderToBackend = async (user, order) => {
         try {
             const userId = user._id || user.email;
-            const res = await fetch('http://localhost:5000/api/order', {
+            const res = await fetch('https://quickpick-backend-6hkt.onrender.com/api/order', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userId, items: order.items, total: order.total, address: user.address })

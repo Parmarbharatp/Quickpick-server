@@ -29,8 +29,8 @@ export const LoginSignup = () => {
     setLoading(true);
     try {
       const url = isLogin
-        ? 'http://localhost:5000/api/auth/login'
-        : 'http://localhost:5000/api/auth/signup';
+        ? 'https://quickpick-backend-6hkt.onrender.com/api/auth/login'
+        : 'https://quickpick-backend-6hkt.onrender.com/api/auth/signup';
       const body = isLogin
         ? { email, password }
         : { name, email, password };
