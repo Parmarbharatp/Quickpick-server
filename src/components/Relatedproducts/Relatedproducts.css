@@ -1,0 +1,115 @@
+.relatedproduct {
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.relatedproduct h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.relatedproduct hr {
+  border: none;
+  border-top: 2px solid #eee;
+  margin-bottom: 30px;
+}
+
+.relatedproduct-item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.related-product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 12px 20px 12px;
+  position: relative;
+}
+
+.related-product-card:hover {
+  box-shadow: 0 6px 24px rgba(37,117,252,0.13);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.related-product-image {
+  width: 100%;
+  max-width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.related-product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.related-product-info {
+  text-align: center;
+}
+
+.related-product-info h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 8px 0 10px 0;
+  color: #333;
+}
+
+.related-product-price {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.related-product-price .new-price {
+  color: #2575fc;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.related-product-price .old-price {
+  color: #aaa;
+  text-decoration: line-through;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .relatedproduct h1 {
+    font-size: 1.2rem;
+  }
+  .relatedproduct-item {
+    gap: 10px;
+    padding: 0 2px;
+  }
+}
+@media (max-width: 600px) {
+  .relatedproduct h1 {
+    font-size: 0.9rem;
+  }
+  .relatedproduct-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 0 1px;
+  }
+  .related-product-card {
+    padding: 10px 4px 14px 4px;
+  }
+  .related-product-image {
+    max-width: 110px;
+    height: 110px;
+  }
+}

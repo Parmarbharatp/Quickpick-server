@@ -1,0 +1,140 @@
+/* Payment Page Responsive Styles */
+
+.payment-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7fa;
+  padding: 2rem 0;
+}
+
+.payment-container {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.payment-success {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+}
+
+.payment-success-title {
+  color: #222;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.payment-form.hidden {
+  display: none;
+}
+
+.payment-title {
+  text-align: center;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.payment-amount {
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.payment-amount span {
+  color: #2575fc;
+  font-weight: 700;
+}
+
+.payment-card-element {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #eee;
+}
+
+.payment-btn {
+  background: #4BB543;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 0;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payment-btn.loading {
+  background: #bbb;
+  cursor: not-allowed;
+}
+
+.payment-btn-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-btn-spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #fff;
+  border-top: 3px solid #4BB543;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .payment-container {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .payment-success {
+    padding: 1.2rem 0.5rem;
+    border-radius: 10px;
+  }
+  .payment-title, .payment-success-title {
+    font-size: 1.2rem;
+  }
+  .payment-btn {
+    font-size: 1rem;
+    padding: 0.6rem 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .payment-container {
+    padding: 0.5rem 0.1rem;
+  }
+  .payment-success {
+    padding: 0.5rem 0.1rem;
+  }
+} 

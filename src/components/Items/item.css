@@ -1,0 +1,112 @@
+.item {
+  width: 100%;
+  max-width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 14px 20px 14px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+  position: relative;
+  min-height: 340px;
+  box-sizing: border-box;
+}
+.item:hover, .item:focus {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(37, 117, 252, 0.13);
+  z-index: 2;
+}
+.item p {
+  margin: 10px 0 0 0;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--text-main);
+  font-weight: 500;
+  min-height: 2.5em;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.item_price {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 4px;
+}
+.new_price {
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.old_price {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.image-wrapper {
+  width: 100%;
+  aspect-ratio: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: var(--radius);
+  padding: 10px;
+  box-sizing: border-box;
+  transition: box-shadow var(--transition);
+  min-height: 120px;
+  max-height: 320px;
+  overflow: hidden;
+}
+.item-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: contain;
+  padding: 10px;
+  background: white;
+  transition: transform var(--transition);
+  display: block;
+}
+.image-wrapper:hover .item-image {
+  transform: scale(1.08);
+}
+@media (max-width: 1200px) {
+  .item {
+    max-width: 220px;
+    padding: 12px 8px 14px 8px;
+    min-height: 180px;
+  }
+  .item p {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 900px) {
+  .item {
+    max-width: 160px;
+    padding: 8px 2px 10px 2px;
+    min-height: 120px;
+  }
+  .item p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 600px) {
+  .item {
+    max-width: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 1px 6px 1px;
+    min-height: 80px;
+  }
+  .item p {
+    font-size: 0.8rem;
+  }
+}
+
