@@ -40,7 +40,7 @@ frontend/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/frontend.git
+git clone https://github.com/Parmarbharatp/Quickpick-server.git
 
 # Navigate to project folder
 cd frontend
