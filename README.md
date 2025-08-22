@@ -73,7 +73,11 @@ The app can be easily deployed on Vercel, Netlify, or any static hosting service
 
 📸 Screenshots
 
-(Add your project screenshots here)
+<img width="493" height="915" alt="image" src="https://github.com/user-attachments/assets/832b091e-d598-4271-bcb2-c3bd7b453e92" />
+<img width="487" height="921" alt="image" src="https://github.com/user-attachments/assets/579c469b-bf2b-4115-8938-30d4128f0be4" />
+<img width="1860" height="857" alt="image" src="https://github.com/user-attachments/assets/fe330c62-bf00-4c45-aab0-12835a88db19" />
+
+
 
 🔗 https://quickpick-server.onrender.com/
 
